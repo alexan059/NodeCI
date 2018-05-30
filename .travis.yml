@@ -17,5 +17,5 @@ install:
   - yarn run build
 script:
   - nohup yarn run start &
-  - sleep 3
+  - sleep 10
   - yarn run test
