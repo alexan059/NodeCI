@@ -17,5 +17,6 @@ install:
   - yarn run build
 script:
   - nohup yarn run start &
-  - sleep 10
+  - sleep 15
+  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
   - yarn run test
